@@ -12,9 +12,10 @@ requirejs.config({
 });
 
 // Start the main app logic.
-requirejs(['libx', 'liby', 'app/sub'],
-function   (lx,        ly,   sub) {
-    //jQuery, canvas and the app/sub module are all
-    //loaded and can be used here now.
-    console.log(lx.sum(3, 4));
-});
+requirejs(['menu'/*, 'libx'*/, 'app/sub'],
+    function   (menu, sub) {
+        //jQuery, canvas and the app/sub module are all
+        //loaded and can be used here now.
+        sub.clog(menu);
+    }
+);
